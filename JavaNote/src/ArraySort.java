@@ -36,9 +36,10 @@ public class ArraySort {
         }
 
          */
+        /*
         //选择排序
         for (int i=0;i< arr1.length;i++){
-            for (int j=(i+1);j< arr1.length;j++){
+            for (int j=i+1;j< arr1.length;j++){
                 if (arr1[i]>arr1[j]){
                     int tmp=arr1[j];
                     arr1[j]=arr1[i];
@@ -46,6 +47,34 @@ public class ArraySort {
                 }
             }
         }
+
+         */
+        //选择排序每一次排序的结果
+        for (int i=0;i< arr1.length;i++){
+            System.out.print("第"+i+"次选择排序的结果");
+            for (int j=(i+1);j< arr1.length;j++){
+                if (arr1[i]>arr1[j]){
+                    int tmp=arr1[j];
+                    arr1[j]=arr1[i];
+                    arr1[i]=tmp;
+                }
+                }
+            for (int a=0;a< arr1.length;a++){
+                System.out.print(arr1[a]+"\t");
+            }
+            System.out.println();
+        }
+
+        /*开始以为可以，后面经过思考发现这其实就是冒泡排序的第一次结果，而且前面for循环判断那边没有写arr1.length-1，导致下面循环的i+1不存在数组中
+        //嗯排序
+        for (int i=0;i< arr1.length-1;i++){
+            if (arr1[i]>arr1[i+1]){
+                int tmp=arr1[i];
+                arr1[i]=arr1[i+1];
+                arr1[i+1]=tmp;
+            }
+        }
+         */
         //打印结果
         for (int i=0;i< arr1.length;i++){
             System.out.print(arr1[i]+"\t");
